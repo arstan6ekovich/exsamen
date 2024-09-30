@@ -1,0 +1,36 @@
+#TodoList {
+  .TodoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 50px 0;
+      align-items: center;
+    }
+    input {
+      width: 300px;
+      height: 30px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      outline: none;
+    }
+    button {
+      padding: 10px 30px;
+      background: linear-gradient(30deg, red, blue, yellow, green);
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .Todos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
