@@ -77,12 +77,14 @@ const TodoList = () => {
             <button type="submit">Submit</button>
           </form>
           {data?.map((el) => (
-            <button onClick={() => deleteAllMutation(el)}>Delete ALL</button>
+            <button onClick={() => deleteAllMutation(el)} key="deleteAll">
+              Delete ALL
+            </button>
           ))}
         </div>
       </div>
       <div className={scss.Todos}>
-        {data?.map((el, index) =>
+        {data?.map((el) =>
           isEdit === el._id ? (
             <form onSubmit={handleSubmitEdit(onSubmitEdit)} key={el._id}>
               <input type="file" {...registerEdit("url")} />
@@ -93,7 +95,7 @@ const TodoList = () => {
               </button>
             </form>
           ) : (
-            <div key={index}>
+            <div key={el._id}>
               <Image width={200} height={200} src={el.url} alt={el.title} />
               <h2>{el.title}</h2>
               <button onClick={() => deleteTodoMutation(el._id)}>Delete</button>

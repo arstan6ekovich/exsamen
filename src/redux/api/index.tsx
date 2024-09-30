@@ -9,7 +9,7 @@ const baseQuery = fetchBaseQuery({
 });
 
 const baseQueryExtended: BaseQueryFn = async (args, api, extraOptions) => {
-  let res = await baseQuery(args, api, extraOptions);
+  const res = await baseQuery(args, api, extraOptions);
   return res;
 };
 
